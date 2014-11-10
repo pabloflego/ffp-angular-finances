@@ -1,0 +1,4 @@
+# allow build for this project only, for azure push
+
+build
+.idea
