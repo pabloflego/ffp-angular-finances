@@ -50,7 +50,7 @@
                 //};
                 //aux('+date', false);
 
-                console.log(aux, aux.length);
+                //console.log(aux, aux.length);
                 return vm.concepts = data;
             });
         }
