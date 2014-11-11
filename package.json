@@ -1,15 +1,15 @@
 {
-  "name": "AngularJS-Modular-Demo",
+  "name": "FFP-Angular-Finances",
   "version": "0.0.1",
-  "description": "AngularJS Modular Demo",
+  "description": "Home Finances app made in Angular",
   "authors": [
-    "John Papa"
+    "Pablo Fernandez Flego"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/johnpapa/ng-demos",
+  "homepage": "https://github.com/pabloflego/ffp-angular-finances",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnpapa/ng-demos.git"
+    "url": "https://github.com/pabloflego/ffp-angular-finances.git"
   },
   "scripts": {
     "init": "npm install",
@@ -24,7 +24,8 @@
     "express": "^4.9.3",
     "method-override": "^1.0.0",
     "morgan": "^1.1.1",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "angular-translate": "^2.4.2"
   },
   "devDependencies": {
     "chai": "^1.9.1",

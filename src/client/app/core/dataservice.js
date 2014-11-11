@@ -15,6 +15,8 @@
             getAvengerCount: getAvengerCount,
             getAvengers: getAvengers,
             //getAccounts: getAccounts,
+            getTransactions: getTransactions,
+            getConcepts: getConcepts,
             ready: ready
         };
 
@@ -71,6 +73,47 @@
                 }
             ];
             return $q.when(accounts);
+        }
+
+        function getTransactions() {
+            var transactions = [
+                {
+                    t_date: new Date(),
+                    qty: 1,
+                    start_date: new Date('2014-05-01T12:00:00'),
+                    value: -2000,
+                    type: 3
+                },
+                { date: new Date('2014-01-01T12:00:00'), value: -1000, type: 1 },
+                { date: new Date('2014-02-01T12:00:00'), value: -1000, type: 2 },
+                { date: new Date('2014-06-01T12:00:00'), value: -2000, type: 4 }
+            ];
+            return $q.when(transactions);
+        }
+
+        function getConcepts() {
+            var concepts = [
+                {
+                    id: 1,
+                    name: 'Cuota Terreno Paso',
+                    c_date: new Date(),
+                    date_start: new Date('2014-01-01T12:00:00'),
+                    values: [
+                        -1000, -1000, 0, 0, -2000, -2000, -2000, 0, -2000, -4000, -2000, -2000,
+                        -4000
+                    ]
+                },
+                {
+                    id: 2,
+                    name: 'Sueldo Neto',
+                    c_date: new Date(),
+                    date_start: new Date('2014-01-01T12:00:00'),
+                    values: [
+                        6336.00, 7026.00, 6831.67, 6831.67, 7302.00, 7044.00, 12800.00, 8288.00, 8562.65, 7494.00, 9365.00
+                    ]
+                }
+            ];
+            return $q.when(concepts);
         }
 
         function prime() {

@@ -4,6 +4,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="today-datas">
+                        <!--
                         <li class="blightblue">
                             <div class="pull-left"><i class="fa fa-plane"></i></div>
                             <div class="datas-text pull-right">
@@ -19,27 +20,27 @@
                             </div>
                             <div class="clearfix"></div>
                         </li>
-
+                        -->
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="widget wblue">
-                        <div data-cc-widget-header title="Avengers Movie Cast"
+                        <div data-cc-widget-header title="{{ 'DASHBOARD.WIDGET_1.TITLE' | translate }}"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
+                            <!-- TODO: Add Year Pager (Column)-->
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Character</th>
+                                        <th data-ng-repeat="n in []">{{ 'DASHBOARD.WIDGET_1.COLS.'+$index | translate }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr data-ng-repeat="a in vm.avengers">
-                                        <td>{{a.name}}</td>
-                                        <td>{{a.character}}</td>
+                                    <tr data-ng-repeat="concept in vm.concepts">
+                                        <td>{{ concept.name }}</td>
+                                        <td data-ng-repeat="cv in concept.values | limitTo:12 track by $index">{{ cv | currency }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -49,12 +50,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="widget wlightblue">
-                        <div data-cc-widget-header title="{{vm.news.title}}"
+                        <div data-cc-widget-header title="{{ 'DASHBOARD.WIDGET_'+2+'.TITLE' | translate }}"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
-                            <small>{{vm.news.description}}</small>
+                            <!--<small>{{vm.news.description}}</small>-->
                         </div>
                         <div class="widget-foot">
                             <div class="clearfix"></div>
