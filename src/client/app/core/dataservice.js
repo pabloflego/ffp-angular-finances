@@ -14,6 +14,7 @@
             getAvengersCast: getAvengersCast,
             getAvengerCount: getAvengerCount,
             getAvengers: getAvengers,
+            //getAccounts: getAccounts,
             ready: ready
         };
 
@@ -59,6 +60,17 @@
                 {name: 'Clark Gregg', character: 'Agent Phil Coulson'}
             ];
             return $q.when(cast);
+        }
+
+        function getAccounts() {
+            var accounts = [
+                {
+                    id: 1,
+                    name: "Pablo"
+
+                }
+            ];
+            return $q.when(accounts);
         }
 
         function prime() {
