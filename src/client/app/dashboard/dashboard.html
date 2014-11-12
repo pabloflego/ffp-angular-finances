@@ -30,21 +30,34 @@
                         <div data-cc-widget-header title="{{ 'DASHBOARD.WIDGET_1.TITLE' | translate }}"
                              allow-collapse="true"></div>
                         <div class="widget-content text-center text-info">
-                            <!-- TODO: Add Year Pager (Column)-->
                             <table class="table table-condensed table-striped">
                                 <thead>
                                     <tr>
+                                        <th></th>
+                                        <th colspan="12" style="text-align: center">{{ vm.currentYear }}</th>
+                                    </tr>
+                                    <tr>
                                         <th data-ng-repeat="n in [] | range:12">
-                                            {{ 'DASHBOARD.WIDGET_1.COLS.'+$index | translate }}</th>
+                                            {{ 'DASHBOARD.WIDGET_1.THEAD.' + n | translate }}
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr data-ng-repeat="concept in vm.concepts">
                                         <td>{{ concept.name }}</td>
-                                        <td data-ng-repeat="cv in concept.values | limitTo:12 track by $index">
-                                            {{ cv | currency }}</td>
+                                        <td data-ng-repeat="n in [] | range:11">
+                                            {{ concept.values[vm.currentYear][n] | currency }}
+                                        </td>
                                     </tr>
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>{{ 'DASHBOARD.WIDGET_1.TFOOT.0' | translate }}</th>
+                                        <td data-ng-repeat="t in vm.totals track by $index">
+                                            {{ t | currency }}
+                                        </td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                         <div class="widget-foot">

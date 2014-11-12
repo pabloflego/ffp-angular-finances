@@ -6,26 +6,29 @@
 
     /* @ngInject */
     function translate($translateProvider) {
-        $translateProvider.translations('en', {
-            'TITLE': 'Hello',
-            'FOO': 'This is a paragraph'
-        });
-
         $translateProvider.translations('es', {
+            'GLOBAL': {
+                'APP_NAME': "FFP Angular Finances"
+            },
             'DASHBOARD': {
                 'WIDGET_1': {
                     'TITLE': 'Transacciones',
-                    'COLS': [
+                    'THEAD': [
                         'Concepto', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
                         'Julio', 'Agosto', 'Septiembre', 'Osctubre', 'Noviembre', 'Diciembre'
-                    ]
+                    ],
+                    'TFOOT': [ 'Totales:' ]
                 },
                 'WIDGET_2': {
-                    'TITLE': 'Nuevo',
-                    'COLS': {0: 'Col 1', 1: 'Col 2'}
+                    'TITLE': 'Nuevo'
                 }
             }
 
+        });
+
+        $translateProvider.translations('en', {
+            'TITLE': 'Hello',
+            'FOO': 'This is a paragraph'
         });
 
         $translateProvider.preferredLanguage('es');
