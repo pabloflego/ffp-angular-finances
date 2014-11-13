@@ -12,10 +12,10 @@
             },
             'DASHBOARD': {
                 'WIDGET_1': {
-                    'TITLE': 'Transacciones',
+                    'TITLE': 'Resumen',
                     'THEAD': [
                         'Concepto', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-                        'Julio', 'Agosto', 'Septiembre', 'Osctubre', 'Noviembre', 'Diciembre'
+                        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
                     ],
                     'TFOOT': [ 'Totales:' ]
                 },
@@ -27,8 +27,9 @@
         });
 
         $translateProvider.translations('en', {
-            'TITLE': 'Hello',
-            'FOO': 'This is a paragraph'
+            'GLOBAL': {
+                'APP_NAME': "FFP Angular Finances"
+            }
         });
 
         $translateProvider.preferredLanguage('es');
