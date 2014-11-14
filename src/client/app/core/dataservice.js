@@ -6,7 +6,7 @@
         .factory('dataservice', dataservice);
 
     /* @ngInject */
-    function dataservice($http, $location, $q, exception, logger) {
+    function dataservice($http, $location, $q, exception, logger, _, jaydataService) {
         var isPrimed = false;
         var primePromise;
 
@@ -18,6 +18,7 @@
         return service;
 
         function getConcepts() {
+            console.log(jaydataService, _);
             var Concept = $data.define("Concept", {
 
             });
