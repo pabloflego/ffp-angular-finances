@@ -18,6 +18,7 @@
         return service;
 
         function getConcepts() {
+            console.log(jaydataService, _);
             var Concept = $data.define("Concept", {
 
             });
