@@ -24,8 +24,7 @@
     "express": "^4.9.3",
     "method-override": "^1.0.0",
     "morgan": "^1.1.1",
-    "serve-favicon": "^2.0.1",
-    "angular-translate": "^2.4.2"
+    "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -101,7 +100,8 @@
       "./bower_components/bootstrap/dist/js/bootstrap.min.js",
       "./bower_components/toastr/toastr.min.js",
       "./bower_components/moment/min/moment.min.js",
-      "./bower_components/extras.angular.plus/ngplus-overlay.js"
+      "./bower_components/extras.angular.plus/ngplus-overlay.js",
+      "./bower_components/angular-translate/angular-translate.min.js"
     ],
     "vendorcss": [
       "./bower_components/bootstrap/dist/css/bootstrap.min.css",

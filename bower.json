@@ -1,12 +1,12 @@
 {
-  "name": "AngularJS Modular Demo",
+  "name": "FFP Angular Finances",
   "version": "0.0.1",
-  "description": "AngularJS Modular Demo",
+  "description": "FFP Angular Finances",
   "authors": [
-    "John Papa"
+    "Pablo Fernandez Flego"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/johnpapa/ng-demos",
+  "homepage": "https://github.com/pabloflego/ffp-angular-finances",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -27,6 +27,8 @@
     "angular-animate": "~1.2.24",
     "angular-sanitize": "~1.2.24",
     "font-awesome": "~4.0.3",
-    "extras.angular.plus": "~0.9.0"
+    "extras.angular.plus": "~0.9.0",
+    "jaydata": "~1.3.6",
+    "angular-translate": "~2.4.2"
   }
 }
