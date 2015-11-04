@@ -1,4 +1,5 @@
 # allow build for this project only, for azure push
 
-build
 .idea
+node_modules
+bower_components
